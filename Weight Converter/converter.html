@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Converter</title>
+    <style>
+       .jumbotron{
+           background-color: blue;
+       }
+       .middle{
+           margin : 0 auto;
+       }
+    </style>
+</head>
+<body style="margin-top:30px">
+    <div class="container " >
+           
+                <div class="col-md-6 middle">
+    <h1 class="display-3 text-center">Weight Converter</h1>
+
+
+    <div class="jumbotron">
+    
+           <h4 style="color:red">Kilogram:</h4> 
+           <input type="text" class="form-control form-control-lg mb-3"id="kg" placeholder="Enter the Kilogram value .....">
+    
+     <div style="text-align: center">
+    <button class="btn-lg btn-success mb-1" onclick="myfun()">Click To Convert</button>
+</div>
+    <h4 style="color:#e616ca">Grams:</h4> 
+    <input  class="form-control form-control-lg mb-3" type="text" id="gram" placeholder="weight in Grams">
+    <h4 style="color:#0ceea3">Pounds:</h4>
+    <input  class="form-control form-control-lg mb-3" type="text" id="pound" placeholder="weight in Pounds">
+    <h4 style="color:#e2f108">Ounces:</h4>
+    <input  class="form-control form-control-lg mb-3" type="text" id="ounce" placeholder="weight in Ounces">
+</div>
+</div>
+</div>
+
+    <script>
+        function myfun(){
+        var weight = document.getElementById("kg").value;
+        document.getElementById("gram").value = weight*1000;
+        document.getElementById("pound").value = (weight*2.20462).toFixed(2);
+        document.getElementById("ounce").value = (weight*35.274).toFixed(2);
+        }
+    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

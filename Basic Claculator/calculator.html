@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+
+    <script>
+       function myfun(num){
+           document.form.text.value = document.form.text.value + num;
+       }
+
+       function clean(){
+           document.form.text.value = "";
+       }
+
+       function calc(){
+           var doc = document.form.text.value;
+           if(doc){
+            document.form.text.value = eval(doc);
+           }
+       }
+
+       function cut(){
+           var doc = document.form.text.value;
+           document.form.text.value = doc.substr(0,doc.length-1);
+       }
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding :0;
+        }
+
+        .button {
+            
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            margin: 2px;
+            cursor: pointer;
+            background: #607d8b;
+            color:white;
+        }
+
+        .textview{
+            font-size: 35px;
+            width : 206px;
+            margin : 5px;
+            padding: 5px;
+            color: #607d8b;
+        }
+
+        .main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%)translateY(-50%);
+            background:rgb(53, 22, 22);
+        }
+
+    </style>
+</head>
+<body style="background-color: #bedffa">
+        <h1 style="text-align: center; font-size: 60px">Basic Calculator</h1>
+    <form name="form" class="main">
+        <input type="text" class="textview" name="text">
+        <table>
+            <tr>
+                <td><input class="button" type="button" value="C" onclick="clean()"></td>
+                <td><input class="button" type="button" value="<" onclick="cut()"></td>
+                <td><input class="button" type="button" value="/" onclick="myfun('/')"></td>
+                <td><input class="button" type="button" value="X" onclick="myfun('*')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="myfun(7)"></td>
+                <td><input class="button" type="button" value="8" onclick="myfun(8)"></td>
+                <td><input class="button" type="button" value="9" onclick="myfun(9)"></td>
+                <td><input class="button" type="button" value="-" onclick="myfun('-')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="myfun(4)"></td>
+                <td><input class="button" type="button" value="5" onclick="myfun(5)"></td>
+                <td><input class="button" type="button" value="6" onclick="myfun(6)"></td>
+                <td><input class="button" type="button" value="+" onclick="myfun('+')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="myfun(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="myfun(2)"></td>
+                <td><input class="button" type="button" value="3" onclick="myfun(3)"></td>
+                <td rowspan="2"><input class="button" style="height: 108px" type="button" value="=" onclick="calc()"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="button" style="width: 108px" type="button" value="0" onclick="myfun(0)"></td>
+                <td><input class="button" type="button" value="." onclick="myfun('.')"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Contest</title>
+    <link href ="style.css" rel ="stylesheet">
+    <script src = "min.js"></script>
+</head>
+<body>
+    <form id="quiz" name="quiz">
+        Write the name of your country?<br>
+        <input type="text" id="question1" name="question1" placeholder="Enter country name..."><br><br>
+       
+        Which one support oop?<br>
+        <input type="radio" id="question2" name="question2" value="html"> HTML<br>
+        <input type="radio" id="question2" name="question2" value="css"> CSS<br>
+        <input type="radio" id="question2" name="question2" value="javascript"> JAVA SCRIPT<br><br>
+        
+        Which on is server side language?<br>
+        <input type="radio" id="question3" name="question3" value="CSS3"> CSS3<br>
+        <input type="radio" id="question3" name="question3" value="php"> PHP<br>
+        <input type="radio" id="question3" name="question3" value="javascript"> JAVA SCRIPT<br>
+        
+        <button type="submit" id="button" onclick="myfun(); return false;" >Submit</button>
+    </form>
+    
+    <div id ="after_submit">
+    <h1 id="para1"></h1>
+    <h4 id="para2"></h4>
+    <img id = "image">
+    </div>
+</body>
+</html>
